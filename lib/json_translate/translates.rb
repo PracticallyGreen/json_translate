@@ -53,12 +53,5 @@ module JSONTranslate
       end
     end
 
-    def translates?
-      included_modules.include?(InstanceMethods)
-    end
-
-    def relation
-      super.extending!(QueryMethods)
-    end
   end
 end
