@@ -1,7 +1,8 @@
 module JSONTranslate
   module Translates
     module QueryMethods
-      def where(opts = :chain, *rest)
+      def where(*args)
+        opts, *rest = args
         if opts.is_a?(Hash)
           query = spawn
 
